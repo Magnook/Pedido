@@ -8,15 +8,16 @@
 
 </head>
 
-<body>
+<body style="font-family: sans-serif;">
 
     <div id="conteudo">
         <h2>Quer namorar comigo?</h2>
-        <button onclick="sim()">Sim</button>
-        <button onmouseover="desvia(this)">Não</button>
+        <button class='btn' onclick="sim()" "sim()">Sim</button>
+        <button class='btn' onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
     </div>
 
     <style>
+    /* aparência dos botões*/
         #conteudo {
             background: #6f01b8;
             width: 100%;
@@ -27,17 +28,28 @@
             padding: 10px;
             text-align: center;
         }
+
+        .btn {
+
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 80px;
+            border-radius: 10px;
+
+        }
     </style>
 
     <script>
         function sim() {
-            alert('você aceitou namorar comigo!!')
+            alert('você aceitou namorar comigo :) agora eu sou o garoto de programa mais feliz do mundo')
         }
         function desvia(t) {
             var btn = t;
             btn.style.position = 'absolute';
-            btn.style.bottom = alterarPosicao(0 ,90)
-            btn.style.left = alterarPosicao(0 ,90)
+            btn.style.bottom = alterarPosicao(0, 90)
+            btn.style.left = alterarPosicao(0, 90)
             console.log('opa, desviei')
 
         }
